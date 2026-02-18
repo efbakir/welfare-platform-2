@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import Card from '../components/Card';
 import Badge from '../components/Badge';
 import Button from '../components/Button';
+import { ActivityIcon, ArrowRightIcon, SparklesIcon, UsersIcon } from '../components/Icons';
 import { feedItems, suggestedNextStep, weeklyHighlights } from '../data/feed';
 import { communitySignals, peopleOpsActions } from '../data/insights';
 
@@ -14,9 +15,9 @@ const typeTone = {
 };
 
 const proofMetrics = [
-  { label: 'Active participants this week', value: '312' },
-  { label: 'Event RSVPs', value: '189' },
-  { label: 'New community joins', value: '124' },
+  { label: 'Active participants this week', value: '312', icon: ActivityIcon },
+  { label: 'Event RSVPs', value: '189', icon: SparklesIcon },
+  { label: 'New community joins', value: '124', icon: UsersIcon },
 ];
 
 const culturePulse = [
@@ -33,6 +34,7 @@ export default function HomePage() {
         <div className="grid gap-4 md:grid-cols-3">
           {proofMetrics.map((metric) => (
             <Card key={metric.label} className="p-4">
+              <metric.icon className="mb-2 h-4 w-4 text-brand-blue" />
               <p className="text-xs text-app-textMuted">{metric.label}</p>
               <p className="mt-1 text-3xl font-bold text-app-textPrimary">{metric.value}</p>
             </Card>
@@ -105,7 +107,10 @@ export default function HomePage() {
 
         <aside className="space-y-4 xl:sticky xl:top-24 xl:self-start">
           <Card>
-            <p className="mb-2 text-xs font-semibold uppercase tracking-[0.14em] text-brand-blue">Build culture</p>
+            <p className="mb-2 inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-[0.14em] text-brand-blue">
+              <UsersIcon className="h-3.5 w-3.5" />
+              Build culture
+            </p>
             <h3 className="mb-3 text-base font-bold">Culture pulse</h3>
             <div className="space-y-3">
               {culturePulse.map((item) => (
@@ -118,7 +123,10 @@ export default function HomePage() {
           </Card>
 
           <Card>
-            <p className="mb-2 text-xs font-semibold uppercase tracking-[0.14em] text-brand-blue">Gain clarity</p>
+            <p className="mb-2 inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-[0.14em] text-brand-blue">
+              <ActivityIcon className="h-3.5 w-3.5" />
+              Gain clarity
+            </p>
             <h3 className="mb-3 text-base font-bold">Community signals</h3>
             <p className="mb-3 text-xs text-app-textMuted">Signals based on activity.</p>
             <div className="space-y-2">
@@ -127,14 +135,20 @@ export default function HomePage() {
                   <p className="text-sm font-semibold text-app-textPrimary">
                     {signal.label}: {signal.value}
                   </p>
-                  <button className="mt-2 text-xs font-semibold text-brand-blue">{signal.cta}</button>
+                  <button className="mt-2 inline-flex items-center gap-1 text-xs font-semibold text-brand-blue">
+                    {signal.cta}
+                    <ArrowRightIcon className="h-3 w-3" />
+                  </button>
                 </div>
               ))}
             </div>
           </Card>
 
           <Card>
-            <p className="mb-2 text-xs font-semibold uppercase tracking-[0.14em] text-brand-blue">Spark change</p>
+            <p className="mb-2 inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-[0.14em] text-brand-blue">
+              <SparklesIcon className="h-3.5 w-3.5" />
+              Spark change
+            </p>
             <h3 className="mb-3 text-base font-bold">Suggested actions for People Ops</h3>
             <div className="space-y-3">
               {peopleOpsActions.map((action) => (
