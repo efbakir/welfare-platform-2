@@ -2,7 +2,7 @@ import { SearchIcon } from './Icons';
 
 export default function Topbar({ title }) {
   return (
-    <header className="sticky top-0 z-20 border-b border-app-border bg-app-bg/90 px-4 py-4 backdrop-blur md:px-8">
+    <header className="sticky top-0 z-20 border-b border-app-border bg-app-bg px-4 py-4 md:px-8">
       <div className="flex items-center justify-between gap-4">
         <h2 className="page-title text-xl md:text-2xl">{title}</h2>
         <div className="flex items-center gap-3">
