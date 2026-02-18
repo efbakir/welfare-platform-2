@@ -1,0 +1,24 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+
+# Local env files
+.env
+.env.local
+.env.*.local
+
+# Vercel
+.vercel
+
+# Logs and cache
+*.log
+npm-debug.log*
+.cache
+
+# Editor / OS
+.DS_Store
+*.swp
+.idea/
+.vscode/
