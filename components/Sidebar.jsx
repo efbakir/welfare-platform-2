@@ -1,16 +1,17 @@
 import { NavLink } from 'react-router-dom';
+import { CalendarIcon, ChartIcon, HomeIcon, TargetIcon, UsersIcon } from './Icons';
 
 export const navItems = [
-  { to: '/', label: 'Home' },
-  { to: '/communities', label: 'Communities' },
-  { to: '/challenges', label: 'Challenges' },
-  { to: '/events', label: 'Events' },
-  { to: '/insights', label: 'Insights (Admin)' },
+  { to: '/', label: 'Home', icon: HomeIcon },
+  { to: '/communities', label: 'Communities', icon: UsersIcon },
+  { to: '/challenges', label: 'Challenges', icon: TargetIcon },
+  { to: '/events', label: 'Events', icon: CalendarIcon },
+  { to: '/insights', label: 'Insights (Admin)', icon: ChartIcon },
 ];
 
 export default function Sidebar() {
   return (
-    <aside className="fixed inset-y-0 left-0 hidden w-[var(--sidebar-w)] border-r border-white/10 bg-app-sidebarBg p-6 md:block">
+    <aside className="fixed inset-y-0 left-0 hidden w-[var(--sidebar-w)] border-r border-white/10 bg-app-sidebarBg p-6 sm:block">
       <div className="mb-8">
         <p className="text-xs font-semibold uppercase tracking-[0.12em] text-app-sidebarText/70">TeamSystem</p>
         <h1 className="mt-1 font-display text-xl font-bold text-white">Community OS</h1>
@@ -29,7 +30,10 @@ export default function Sidebar() {
               }`
             }
           >
-            {item.label}
+            <span className="flex items-center gap-2.5">
+              <item.icon className="h-4 w-4" />
+              <span>{item.label}</span>
+            </span>
           </NavLink>
         ))}
       </nav>

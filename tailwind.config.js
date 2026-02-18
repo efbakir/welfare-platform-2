@@ -28,6 +28,7 @@ export default {
           textSecondary: 'var(--color-text-secondary)',
           textMuted: 'var(--color-text-muted)',
           sidebarBg: 'var(--color-sidebar-bg)',
+          sidebarText: 'var(--color-sidebar-text)',
           sidebarActive: 'var(--color-sidebar-active)',
           sidebarHover: 'var(--color-sidebar-hover)',
         },

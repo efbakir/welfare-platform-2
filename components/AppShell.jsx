@@ -25,9 +25,9 @@ export default function AppShell() {
   return (
     <div className="min-h-screen bg-app-bg text-app-textPrimary">
       <Sidebar />
-      <div className="md:ml-[var(--sidebar-w)]">
+      <div className="sm:ml-[var(--sidebar-w)]">
         <Topbar title={resolveTitle(location.pathname)} />
-        <main className="px-4 py-6 md:px-8">
+        <main className="px-4 py-6 sm:px-8">
           <MobileNav />
           <Outlet />
         </main>
