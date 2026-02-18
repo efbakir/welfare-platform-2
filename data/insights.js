@@ -28,3 +28,24 @@ export const aiSuggestions = [
   'Replicate the Knowledge Sharing Lab template in two smaller offices where join rates are below average.',
   'Bundle one monthly volunteering event with one practical skill-sharing workshop to improve cross-team attendance.',
 ];
+
+export const communitySignals = [
+  { label: 'Teams at risk of isolation', value: '2', cta: 'View segment' },
+  { label: 'New joiners with low participation', value: '14', cta: 'Recommend actions' },
+  { label: 'Top connector communities', value: '3', cta: 'View segment' },
+];
+
+export const peopleOpsActions = [
+  {
+    title: "Launch a 2-week 'Coffee Roulette' for Remote employees in Product + Design",
+    why: 'Why: Cross-team interaction in remote product groups is below the company average this month.',
+  },
+  {
+    title: "Promote 'Working Parents Network' to Milan office, lunchtime slot",
+    why: 'Why: Milan shows high caregiver demand and low mid-day community attendance in Q1.',
+  },
+  {
+    title: 'Create a volunteer event template for local teams',
+    why: 'Why: Local offices with reusable event templates convert more intent into confirmed RSVPs.',
+  },
+];
