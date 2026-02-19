@@ -18,6 +18,9 @@ export default {
           secondary: 'var(--color-secondary)',
           secondaryTint: 'var(--color-secondary-tint)',
         },
+        violet: {
+          tint: 'var(--color-violet-tint)',
+        },
         app: {
           bg: 'var(--color-bg)',
           surface: 'var(--color-surface)',

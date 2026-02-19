@@ -1,6 +1,6 @@
 export default function Tabs({ items, activeKey, onChange }) {
   return (
-    <div className="inline-flex rounded-md border border-app-border bg-app-surface p-1 shadow-xs">
+    <div className="inline-flex rounded-lg border border-app-border bg-app-surface p-1 shadow-xs">
       {items.map((item) => {
         const isActive = item.key === activeKey;
         return (

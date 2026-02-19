@@ -99,3 +99,11 @@ export function ArrowRightIcon(props) {
     </BaseIcon>
   );
 }
+
+export function SparkleIcon(props) {
+  return (
+    <BaseIcon {...props}>
+      <path d="M12 3l1.4 3.6L17 8l-3.6 1.4L12 13l-1.4-3.6L7 8l3.6-1.4L12 3z" />
+    </BaseIcon>
+  );
+}
